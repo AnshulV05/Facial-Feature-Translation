@@ -6,9 +6,9 @@ The different GAN implementations utilize the following references:
 **AttentionGAN** : <https://github.com/Ha0Tang/AttentionGAN/tree/master/AttentionGAN-v1-multi>  
 **AttributeGAN** : <https://github.com/elvisyjlin/AttGAN-PyTorch> 
 
-We have used the [**CelebA**](https://paperswithcode.com/dataset/celeba) dataset to train the StarGAN and AttentionGAN models. The download link for the dataset can be found [here](https://www.dropbox.com/s/d1kjpkqklf0uw77/celeba.zip?dl=0). \
-We have utilized the pre-trained AttributeGAN model for the image synthesis. The different model checkpoints for AttGAN can be found [here](https://drive.google.com/drive/folders/1_E5YCb4XOTZpt6KBwBzSaJdofoqPViN8).\
-The specific checkpoint used for our purpose was [128_shortcut1_inject1_none](https://drive.google.com/drive/folders/1_E5YCb4XOTZpt6KBwBzSaJdofoqPViN8).\
+We have used the [**CelebA**](https://paperswithcode.com/dataset/celeba) dataset to train the StarGAN and AttentionGAN models. The download link for the dataset can be found [here](https://www.dropbox.com/s/d1kjpkqklf0uw77/celeba.zip?dl=0).  
+We have utilized the pre-trained AttributeGAN model for the image synthesis. The different model checkpoints for AttGAN can be found [here](https://drive.google.com/drive/folders/1_E5YCb4XOTZpt6KBwBzSaJdofoqPViN8).  
+The specific checkpoint used for our purpose was [128_shortcut1_inject1_none](https://drive.google.com/drive/folders/1_E5YCb4XOTZpt6KBwBzSaJdofoqPViN8).
 
 The models trained/used are collated [here](https://drive.google.com/drive/folders/15aE-ir2eCbAWT068E8RsOa2u171SHXMp).
 ## Code Structure 
