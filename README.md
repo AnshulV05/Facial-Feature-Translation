@@ -88,7 +88,7 @@ The trained models should be saved according to the following directory structur
   
 ### Evaluating the generated Images
 We use two different metrics GeneratorLoss and Frechet inception distance [(FID)](https://en.wikipedia.org/wiki/Frechet_inception_distance) for comparing the performance across different GAN models. 
-The GeneratorLoss for an image $x$ originally from domain a being translated to domain b is defined as $$G_loss = -E[D_{src}(G(x,b))] + \lambda_{1} \times E[||x - G(G(x,b),a)||] + \lambda_{2} \times E[-log(D_{cls}(b | G(x,b)]$$.   
+The GeneratorLoss for an image $x$ originally from domain a being translated to domain b is defined as $$G_{loss} = -E[D_{src}(G(x,b))] + \lambda_{1} \times E[||x - G(G(x,b),a)||] + \lambda_{2} \times E[-log(D_{cls}(b | G(x,b)]$$.   
 The lower the generator loss or fid_score value, the better is the model.  
 To get the scores simply run:
 ```bash
