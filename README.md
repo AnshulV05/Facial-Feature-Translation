@@ -78,7 +78,7 @@ The trained models should be saved according to the following directory structur
   Give the on-screen inputs for the data folder name and number of images. The resulting images get generated with the corresponding directory structure:
   ```
   .
-  ├── data
+  ├── <folder-name>
   │   ├── images
   │   │   ├── 000001.jpg
   │   │        ...
