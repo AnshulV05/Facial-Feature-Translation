@@ -53,7 +53,7 @@ The trained models should be saved according to the following directory structur
 
 ## Instructions to run the code
 ### Generating New images
-- To generate new images for custom images, copy the images inside the `outDomainData/images/` folder and run the following:
+- To generate new images for custom images, copy the custom images inside the `outDomainData/images/` folder and run the following:
 
   ```bash
   cd outDomainData
@@ -63,14 +63,36 @@ The trained models should be saved according to the following directory structur
   The `img.py` script crops the image with the appropriate size.
   The `getAttr.py` asks you for the image name and all of its attributes.
   
-  Running the above commands would generate lines corresping to images and attributes in `gen.txt`.
-  Copy the same in `attr.txt` provided in the same `outDomainData` folder and then cd to original project folder and run the following:
+  Running the above commands would generate lines corresponding to images and attributes in `gen.txt` copy the lines in `attr.txt` provided in `outDomainData` folder and then run the following:
   ```bash
+  cd ..
   python3 generate.py --type outDomainData
   ```
   
-  The generated results get stored in the folder `./results/<folder_name>`
-- To generate 
+  The generated results would get stored in the folder `./results/outDomainData`
+  
+- To generate new images by using random sample images from the CelebA dataset, run the following:
+  ```bash
+  python3 sample.py
+  ```
+  Give the on-screen inputs for the data folder name and number of images. The resulting images get generated with the corresponding directory structure:
+  ```
+  .
+  ├── data
+  │   ├── images
+  │   │   ├── 000001.jpg
+  │   │        ...
+  │   │   └── <number_of_images>.jpg
+  │   └── attr.txt
+  ```
 ### Evaluating the generated Images
-
+We use two different metrics GeneratorLoss and Frechet inception distance [(FID)](https://en.wikipedia.org/wiki/Frechet_inception_distance) for comparing the performance across different GAN models. 
+The GeneratorLoss for an image $x$ originally from domain a being translated to domain b is defined as $$G_loss = -E[D_{src}(G(x,b))] + \lambda_{1} \times E[||x - G(G(x,b),a)||] + \lambda_{2} \times E[-log(D_{cls}(b | G(x,b)]$$.   
+The lower the generator loss or fid_score value, the better is the model.  
+To get the scores simply run:
+```bash
+python3 evaluator.py
+python3 fid.py
+```
+The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_score_<gan_name>` containing the scores of different GANs.
 
