@@ -104,7 +104,7 @@ The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_scor
 - `sampleTest.py`: Randomly sample images from the CelebA dataset.  
 - `generate.py`: Generate the fake images for the original images in the path provided.
 - `evaluation.py`: Evaluates different models based on their Quantitative measures of fid or Generator loss 
-- `fid`: Calculates the FID associated with the image and its corresponding translated image
+- `fid.py`: Calculates the FID associated with the image and its corresponding translated image
 - `outDomainData/getAttr.py`: Asks for attributes for a custom image from the user and writes to a file
 - `outDomainData/img.py`: Used to crop custom images to fit to the CelebA training images size
  
