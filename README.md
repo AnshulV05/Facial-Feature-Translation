@@ -85,6 +85,7 @@ The trained models should be saved according to the following directory structur
   │   │   └── <number_of_images>.jpg
   │   └── attr.txt
   ```
+  
 ### Evaluating the generated Images
 We use two different metrics GeneratorLoss and Frechet inception distance [(FID)](https://en.wikipedia.org/wiki/Frechet_inception_distance) for comparing the performance across different GAN models. 
 The GeneratorLoss for an image $x$ originally from domain a being translated to domain b is defined as $$G_loss = -E[D_{src}(G(x,b))] + \lambda_{1} \times E[||x - G(G(x,b),a)||] + \lambda_{2} \times E[-log(D_{cls}(b | G(x,b)]$$.   
@@ -96,3 +97,14 @@ python3 fid.py
 ```
 The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_score_<gan_name>` containing the scores of different GANs.
 
+### Files and utilities
+- `stargan_generator.py`: Contains the model class and functions to generate images using StarGAN
+- `attention_generator.py`: Contains the model class and functions to generate images using AttentionGan
+- `attgan_generator.py`: Contains the model class of the entire ATTGAN and functions to generate images using AttGAN
+- `sampleTest.py`: Randomly sample images from the CelebA dataset.  
+- `generate.py`: Generate the fake images for the original images in the path provided.
+- `evaluation.py`: Evaluates different models based on their Quantitative measures of fid or Generator loss 
+- `fid`: Calculates the FID associated with the image and its corresponding translated image
+- `outDomainData/getAttr.py`: Asks for attributes for a custom image from the user and writes to a file
+- `outDomainData/img.py`: Used to crop custom images to fit to the CelebA training images size
+ 
