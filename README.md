@@ -100,7 +100,7 @@ The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_scor
 ### Files and utilities
 - `stargan_generator.py`: Contains the model class and functions to generate images using StarGAN
 - `attention_generator.py`: Contains the model class and functions to generate images using AttentionGan
-- `attgan_generator.py`: Contains the model class of the entire ATTGAN and functions to generate images using AttGAN
+- `attgan_generator.py`: Contains the model class of ATTGAN and functions to generate images using ATTGAN.G
 - `sampleTest.py`: Randomly sample images from the CelebA dataset.  
 - `generate.py`: Generate the fake images for the original images in the path provided.
 - `evaluation.py`: Evaluates different models based on their Quantitative measures of fid or Generator loss 
