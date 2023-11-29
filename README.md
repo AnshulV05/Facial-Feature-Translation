@@ -107,4 +107,6 @@ The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_scor
 - `fid.py`: Calculates the FID associated with the image and its corresponding translated image
 - `outDomainData/getAttr.py`: Asks for attributes for a custom image from the user and writes to a file
 - `outDomainData/img.py`: Used to crop custom images to fit to the CelebA training images size
- 
+
+## Link to the project report
+Can be found [here](https://drive.google.com/file/d/1MV5mzAxC3Vh_-Yg6fdesc2Nsf8TomvMA/view?usp=sharing)
