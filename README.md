@@ -95,7 +95,7 @@ To get the scores simply run:
 python3 evaluator.py
 python3 fid.py
 ```
-The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_score_<gan_name>` containing the scores of different GANs.
+The commands generate corresponding files: `losses_<gan_name>.txt` and `fid_score_<gan_name>.txt` containing the scores of different GANs.
 
 ### Files and utilities
 - `stargan_generator.py`: Contains the model class and functions to generate images using StarGAN
