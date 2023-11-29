@@ -44,7 +44,7 @@ for i in range(2, nm + 1):
 	r = np.array(Image.open(f'testData/images/{x}.jpg').resize((128,128)))[np.newaxis,:,:,:]
 	real_images = np.concatenate([real_images, r], axis = 0)
 
-real_images = real_images[1:,:,:,:]
+# real_images = real_images[1:,:,:,:]
 
 attributes = ["Blond_Hair", "Bald", "Young"]
 gans = ["stargan", "attentiongan", "attgan"]
